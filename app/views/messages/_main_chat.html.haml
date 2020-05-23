@@ -1,0 +1,38 @@
+.chat-main
+  .chat-main__group-info
+    .chat-main__group-info__left-box
+      .chat-main__group-info__left-box__current-group
+        test
+      .chat-main__group-info__left-box__member
+        Member:masa
+    .chat-main__group-info__right-box
+      = link_to "#", class: "chat-main__group-info__right-box__edit-btn" do
+        Edit
+  .chat-main__message-list
+    .chat-main__message-list__message
+      .chat-main__message-list__message__name-box
+        .chat-main__message-list__message__name-box__name
+          masa
+        .chat-main__message-list__message__name-box__date
+          2019/11/20(web) 17:43:01
+      .chat-main__message-list__text
+        おはよう！
+    .chat-main__message-list__message
+      .chat-main__message-list__message__name-box
+        .chat-main__message-list__message__name-box__name
+          masa
+        .chat-main__message-list__message__name-box__date
+          2019/11/20(web) 17:43:01
+      .chat-main__message-list__text
+        おはよう！
+  .chat-main__message-form
+    = form_for "#" do |f|
+      .chat-main__message-form__input-box
+        .chat-main__message-form__input-box__text-field
+          = f.text_field :message, placeholder: "type a message", class: ".chat-main__message-form__input-box__text-field__new-message"
+          .chat-main__message-form__input-box__text-field__image
+            = f.label :image, class: "chat-main__message-form__input-box__text-field__image__btn" do
+              %i.fa.fa-image
+              = f.file_field :image
+        = f.submit "Send",class: "chat-main__message-form__input-box__submit-btn" 
+
