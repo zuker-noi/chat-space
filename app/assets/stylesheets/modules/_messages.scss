@@ -31,8 +31,17 @@
         display: flex;
         justify-content: flex-end;
         &__new-group {
+          &__btn {
+            color: #ffffff;
+            text-decoration: none;
+          }
         }
         &__edit-user {
+          &__btn {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 5px;
+          }
         }
       }
     }
@@ -53,10 +62,9 @@
   }
 }
 
-.side-bar a {
+.side-bar__group-list a {
   color: #ffffff;
   text-decoration: none;
-  margin-left: 2.5px;
 }
 
 .chat-main {
@@ -137,6 +145,7 @@
         input[type="text"] {
           height: 50px;
           width: 100%;
+          padding-left: 10px;
         }
         &__image {
           position: absolute;
